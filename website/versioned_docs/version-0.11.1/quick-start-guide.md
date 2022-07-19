@@ -76,9 +76,9 @@ From the extracted directory run pyspark with Hudi:
 export PYSPARK_PYTHON=$(which python3)
 pyspark \
 --packages org.apache.hudi:hudi-spark3.2-bundle_2.12:0.11.1 \
---conf 'spark.serializer=org.apache.spark.serializer.KryoSerializer' \
---conf 'spark.sql.catalog.spark_catalog=org.apache.spark.sql.hudi.catalog.HoodieCatalog' \
---conf 'spark.sql.extensions=org.apache.spark.sql.hudi.HoodieSparkSessionExtension'
+--conf spark.serializer=org.apache.spark.serializer.KryoSerializer \
+--conf spark.sql.catalog.spark_catalog=org.apache.spark.sql.hudi.catalog.HoodieCatalog \
+--conf spark.sql.extensions=org.apache.spark.sql.hudi.HoodieSparkSessionExtension
 ```
 ```shell
 # Spark 3.1
